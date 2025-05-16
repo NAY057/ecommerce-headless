@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { Game } from "@/api";
+import { GridGames } from "@/components/Shared";
 
 const gameCtrl = new Game();
-const limit = 9;
-const platformId = null;
+// const limit = 9;
+// const platformId = null;
 
-export function LatestGames() {
+export function LatestGames(props) {
+	const { title, limit = 9, platformId = null } = props;
 	const [games, setGames] = useState(null);
-	console.log(games);
+	// console.log(games);
 
 	useEffect(() => {
 		// al user los parentesis asi (codigo aqui)() se esta haciendo una funcion anonima auto ejecutabla
@@ -28,7 +30,8 @@ export function LatestGames() {
 
 	return (
 		<div>
-			<h1>LatestGames</h1>
+			<h2>{title}</h2>
+			<GridGames games={games} />
 		</div>
 	);
 }

@@ -10,7 +10,7 @@ export default function HomePage() {
 				<Home.BannerLastGamePublished />
 				<Separator height={100} />
 				<Container>
-					<Home.LatestGames />
+					<Home.LatestGames title="ultimos lanzamientos" />
 				</Container>
 			</BasicLayout>
 		</>
