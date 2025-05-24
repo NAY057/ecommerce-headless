@@ -6,7 +6,6 @@ import { fn } from "@/utils";
 
 export function GridGames(props) {
 	const { games } = props;
-	// console.log(games, "yeeeahhh");
 
 	return (
 		<div className={styles.gridGames}>
