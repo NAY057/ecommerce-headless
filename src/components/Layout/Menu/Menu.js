@@ -31,6 +31,10 @@ export function Menu(props) {
 
 	useEffect(() => {
 		setSearchText(router.query.s || "");
+		// el componente Menu utiliza la funcion de router.query.s (dentro del useEffect para
+		//  cargar la pagina y que no pierda la data del buscador)
+		// La s se agrega en la linea (		router.replace(`/search?s=${text}`); ) ya que se agrega esa letra
+		// como parte del parametro del query en la url
 	}, []);
 
 	const onSearch = (text) => {
