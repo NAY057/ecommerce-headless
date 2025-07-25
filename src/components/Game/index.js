@@ -1,2 +1,3 @@
 import { HeaderWallpaperGame } from "./HeaderWallpaper";
-export const Game = { HeaderWallpaperGame };
+import { Panell } from "./Panel";
+export const Game = { HeaderWallpaperGame, Panell };
