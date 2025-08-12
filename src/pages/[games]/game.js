@@ -13,6 +13,7 @@ export default function GamePage(props) {
 				<Game.HeaderWallpaperGame image={game.wallpaper.url} />
 				<Game.Panell gameId={game.id} game={game} />
 				<Separator height={50} />
+				<Game.Info game={game} />
 			</BasicLayout>
 		</>
 	);
