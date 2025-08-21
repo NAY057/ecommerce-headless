@@ -13,7 +13,6 @@ export async function getServerSideProps(context) {
 
 	const gameCtrl = new Game();
 	const response = await gameCtrl.getBySlug(games);
-	console.log(response, "GAMESSS");
 	return {
 		props: {
 			game: response,
