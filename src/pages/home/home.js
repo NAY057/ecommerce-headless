@@ -2,6 +2,7 @@ import { BasicLayout } from "@/layouts";
 import { Home } from "@/components/Home";
 import { Separator, BarTrust, BannerAd } from "@/components/Shared";
 import { Container } from "semantic-ui-react";
+import { useCart } from "@/hooks";
 
 const platformsId = {
 	playStation: 1,
@@ -10,6 +11,7 @@ const platformsId = {
 	pc: 4,
 };
 export default function HomePage() {
+	console.log(useCart());
 	return (
 		<>
 			<BasicLayout>

@@ -8,7 +8,9 @@ export default function App(props) {
 	const { Component, pageProps } = props;
 	return (
 		<AuthProvider>
-			<Component {...pageProps} />
+			<CartProvider>
+				<Component {...pageProps} />
+			</CartProvider>
 		</AuthProvider>
 	);
 }
