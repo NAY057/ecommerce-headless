@@ -16,7 +16,7 @@ export function Panell(props) {
 
 		setTimeout(() => {
 			setLoading(false);
-		}, 1000);
+		}, 300);
 	};
 	return (
 		<Container className={styles.panel}>
