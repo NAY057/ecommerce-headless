@@ -1,0 +1,43 @@
+import { Icon, Image } from "semantic-ui-react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { map } from "lodash";
+import classNames from "classnames";
+import styles from "./HeaderCart.module.scss";
+export function HeaderCart() {
+	const steps = [
+		{ number: 1, title: "cesta" },
+		{ number: 2, title: "pago" },
+		{ number: 3, title: "Confirmacion" },
+	];
+
+	return (
+		<div className={styles.headerCart}>
+			<div className={styles.left}>
+				<Link href="/">
+					<Image src="/images/logo.png" alt="Logo" />
+				</Link>
+			</div>
+
+			<div className={styles.center}>
+				{map(steps, (step) => (
+					<div key={step.number}>
+						<span className={styles.number}>
+							<Icon name="check" />
+							{step.number}
+						</span>
+						<span className={styles.title}></span>
+						<span className={styles.space}></span>
+					</div>
+				))}
+			</div>
+			<div className={styles.right}>
+				<Icon name="lock" />
+				<div>
+					<span>Pago seguro</span>
+					<span>256-bit ssl Secure</span>
+				</div>
+			</div>
+		</div>
+	);
+}
