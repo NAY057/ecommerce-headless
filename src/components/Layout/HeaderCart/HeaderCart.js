@@ -5,9 +5,14 @@ import { map } from "lodash";
 import classNames from "classnames";
 import styles from "./HeaderCart.module.scss";
 export function HeaderCart() {
+	const {
+		query: { step = 1 },
+	} = useRouter();
+	const currentStep = step;
+
 	const steps = [
-		{ number: 1, title: "cesta" },
-		{ number: 2, title: "pago" },
+		{ number: 1, title: "Cesta" },
+		{ number: 2, title: "Pago" },
 		{ number: 3, title: "Confirmacion" },
 	];
 
@@ -21,12 +26,19 @@ export function HeaderCart() {
 
 			<div className={styles.center}>
 				{map(steps, (step) => (
-					<div key={step.number}>
+					<div
+						key={step.number}
+						className={classNames({
+							[styles.active]:
+								step.number === Number(currentStep),
+							[styles.success]: step.number < Number(currentStep),
+						})}
+					>
 						<span className={styles.number}>
 							<Icon name="check" />
 							{step.number}
 						</span>
-						<span className={styles.title}></span>
+						<span className={styles.title}>{step.title}</span>
 						<span className={styles.space}></span>
 					</div>
 				))}

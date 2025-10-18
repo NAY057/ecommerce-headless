@@ -2,13 +2,18 @@ import { forEach } from "lodash";
 import { ENV, authFetch } from "@/utils";
 
 export class Cart {
-	add(gameId) {
+	add(documentId) {
 		const games = this.getAll();
 
-		const objIndex = games.findIndex((game) => game.id === gameId);
+		const objIndex = games.findIndex(
+			(game) => game.documentId === documentId
+		);
 
 		if (objIndex < 0) {
-			games.push({ id: gameId, quantity: 1 });
+			games.push({
+				documentId: documentId,
+				quantity: 1,
+			});
 		} else {
 			const game = games[objIndex];
 			games[objIndex].quantity = game.quantity + 1;
