@@ -40,4 +40,22 @@ export class Cart {
 
 		return count;
 	}
+
+	changeQuantity(documentId, quantity) {
+		const games = this.getAll();
+		const objIndex = games.findIndex(
+			(game) => game.documentId === documentId
+		);
+		//de debe usar el documentId como identificador para lograr hacer la operaciones
+		games[objIndex].quantity = quantity;
+		localStorage.setItem(ENV.CART, JSON.stringify(games));
+	}
+
+	delete(documentId) {
+		const games = this.getAll();
+		const updateGames = games.filter(
+			(game) => game.documentId !== documentId
+		);
+		localStorage.setItem(ENV.CART, JSON.stringify(updateGames));
+	}
 }

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Game } from "@/api";
 import { CartLayout } from "@/layouts";
 import { useCart } from "@/hooks";
+import { Cart } from "@/components/Cart";
 
 const gameCtrl = new Game();
 
@@ -41,7 +42,7 @@ export default function CartPage() {
 	return (
 		<>
 			<CartLayout>
-				{currentStep === 1 && <p>Step ONE</p>}
+				{currentStep === 1 && <Cart.StepOne games={games} />}
 				{currentStep === 2 && <p>Step TWO</p>}
 				{currentStep === 3 && <p>Step THREE</p>}
 			</CartLayout>

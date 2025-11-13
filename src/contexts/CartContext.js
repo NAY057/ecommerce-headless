@@ -18,6 +18,16 @@ export function CartProvider(props) {
 		refreshTotalCart();
 	};
 
+	const changeQuantityItem = (documentId, quantity) => {
+		cartCtrl.changeQuantity(documentId, quantity);
+		refreshTotalCart();
+	};
+
+	const deleteItem = (documentId) => {
+		cartCtrl.delete(documentId);
+		refreshTotalCart();
+	};
+
 	const refreshTotalCart = () => {
 		setTotal(cartCtrl.count());
 		setCart(cartCtrl.getAll);
@@ -27,9 +37,9 @@ export function CartProvider(props) {
 		cart,
 		addCart,
 		total,
-		deleteItem: () => {},
+		deleteItem,
 		deleteAllItems: () => {},
-		changeQuantityItem: () => {},
+		changeQuantityItem,
 	};
 
 	return (
