@@ -99,13 +99,11 @@ export class Game {
 	async getGameById(documentId) {
 		try {
 			const populate = `populate[0]=cover&populate[1]=platform`;
-			debugger;
 			const url = `${ENV.API_URL}/${ENV.ENDPOINTS.GAME}/${documentId}?${populate}`;
 			const response = await fetch(url);
 			const result = await response.json();
 
 			if (response.status !== 200) throw result;
-			debugger;
 			return result;
 		} catch (error) {
 			throw error;

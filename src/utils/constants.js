@@ -15,4 +15,6 @@ export const ENV = {
 	},
 	TOKEN: "token",
 	CART: "cart",
+	STRIPE_TOKEN:
+		"pk_test_51Q5LEIBGdnVMmJCcpvzu0F4D4vg4aAelttcWSfsXcWMHMCz8K3FLuEC7cii5F9HGsdt5uFMgP5dVLnDk73wXsgTc00QY5lsB0r",
 };
