@@ -1,6 +1,6 @@
 import { BasicLayout } from "@/layouts";
 import { Home } from "@/components/Home";
-import { Separator, BarTrust, BannerAd } from "@/components/Shared";
+import { Separator, BarTrust, BannerAd, Seo } from "@/components/Shared";
 import { Container } from "semantic-ui-react";
 import { useCart } from "@/hooks";
 
@@ -14,6 +14,7 @@ export default function HomePage() {
 	console.log(useCart());
 	return (
 		<>
+			<Seo />
 			<BasicLayout>
 				{/* <h1>Estamos en la Home</h1> */}
 				<Home.BannerLastGamePublished />

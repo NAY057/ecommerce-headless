@@ -4,6 +4,7 @@ import { Game } from "@/api";
 import { CartLayout } from "@/layouts";
 import { useCart } from "@/hooks";
 import { Cart } from "@/components/Cart";
+import { Seo } from "@/components/Shared";
 
 const gameCtrl = new Game();
 
@@ -41,6 +42,7 @@ export default function CartPage() {
 	// el && es un condicional corto
 	return (
 		<>
+			<Seo title="Carrito" />
 			<CartLayout>
 				{currentStep === 1 && <Cart.StepOne games={games} />}
 				{currentStep === 2 && <Cart.StepTwo games={games} />}

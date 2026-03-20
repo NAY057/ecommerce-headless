@@ -6,6 +6,7 @@ import {
 	Separator,
 	NoResult,
 	Pagination,
+	Seo,
 } from "@/components/Shared";
 
 export default function PlatformPage(props) {
@@ -14,6 +15,7 @@ export default function PlatformPage(props) {
 
 	return (
 		<>
+			<Seo title={`Juegos de ${platform.title}`} />
 			<BasicLayout relative>
 				<Container>
 					<Separator height={50} />
