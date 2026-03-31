@@ -20,7 +20,7 @@ export default function HomePage() {
 				<Home.BannerLastGamePublished />
 				<Separator height={100} />
 				<Container>
-					<Home.LatestGames title="ultimos lanzamientos" />
+					<Home.LatestGames title="Con 💘 para VNEOM" />
 				</Container>
 				<Separator height={100} />
 				<BarTrust />
