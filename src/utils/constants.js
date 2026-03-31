@@ -1,6 +1,6 @@
 export const ENV = {
-	SERVER_HOST: "ecommerce-headless.up.railway.app",
-	API_URL: "ecommerce-headless.up.railway.app/api",
+	SERVER_HOST: "https://ecommerce-headless.up.railway.app",
+	API_URL: "https://ecommerce-headless.up.railway.app/api",
 	ENDPOINTS: {
 		AUTH: {
 			REGISTER: "auth/local/register",
