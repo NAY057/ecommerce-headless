@@ -24,7 +24,6 @@ export function BannerLastGamePublished() {
 	const wallpaper = game.wallpaper;
 	const releaseDate = new Date(game.releaseDate).toISOString();
 	const price = fn.calcDiscountedPrice(game.price, game.discount);
-	console.log("precio actual", price, game);
 
 	return (
 		<div className={styles.container}>

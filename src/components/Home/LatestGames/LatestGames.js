@@ -9,7 +9,6 @@ const gameCtrl = new Game();
 export function LatestGames(props) {
 	const { title, limit = 9, platformId = null } = props;
 	const [games, setGames] = useState(null);
-	// console.log(games);
 
 	useEffect(() => {
 		// al user los parentesis asi (codigo aqui)() se esta haciendo una funcion anonima auto ejecutabla

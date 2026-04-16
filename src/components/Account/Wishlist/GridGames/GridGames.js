@@ -5,8 +5,6 @@ import { fn } from "@/utils";
 import styles from "./GridGames.module.scss";
 export function GridGames(props) {
 	const { wishlist, onReload } = props;
-	console.log(wishlist);
-
 	return (
 		<div className={styles.gridGames}>
 			{map(wishlist, (item) => {

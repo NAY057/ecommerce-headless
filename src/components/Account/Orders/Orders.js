@@ -15,7 +15,6 @@ export function Orders() {
 			try {
 				const response = await orderCtrl.getAll(user.id);
 				setOrder(response.data);
-				console.log(response);
 			} catch (error) {
 				console.log(error);
 			}

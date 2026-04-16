@@ -30,7 +30,6 @@ export default function CartPage() {
 							quantity: item.quantity,
 						});
 					}
-					console.log(data);
 					setGames(data);
 				}
 			} catch (error) {

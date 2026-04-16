@@ -11,7 +11,6 @@ const platformsId = {
 	pc: 4,
 };
 export default function HomePage() {
-	console.log(useCart());
 	return (
 		<>
 			<Seo />
@@ -20,7 +19,7 @@ export default function HomePage() {
 				<Home.BannerLastGamePublished />
 				<Separator height={100} />
 				<Container>
-					<Home.LatestGames title="Con 💘 para VNEOM" />
+					<Home.LatestGames title="ultimos lanzamientos" />
 				</Container>
 				<Separator height={100} />
 				<BarTrust />

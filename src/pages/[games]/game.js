@@ -5,7 +5,6 @@ import { Separator, Seo } from "@/components/Shared";
 // estos props vienen de lo que se esta mandando en el index.js que esta en estam misma ruta
 export default function GamePage(props) {
 	const { game } = props;
-	console.log(props);
 
 	return (
 		<>
