@@ -1,14 +1,26 @@
 .stepOne {
   display: flex;
   width: 100%;
+  gap: 20px;
 
   .center {
     width: 65%;
-    padding-right: 20px;
   }
 
   .right {
     width: 35%;
-    padding-left: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .stepOne {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stepOne .center,
+  .stepOne .right {
+    width: 100%;
+    padding: 0;
   }
 }

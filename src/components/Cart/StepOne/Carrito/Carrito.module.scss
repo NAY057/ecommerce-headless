@@ -71,3 +71,24 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .product {
+    flex-direction: column;
+  }
+
+  .product > img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  .product > div {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product > div .info {
+    padding: 0;
+  }
+}
