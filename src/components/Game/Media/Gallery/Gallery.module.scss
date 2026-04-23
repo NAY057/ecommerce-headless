@@ -90,3 +90,33 @@
       }
     }
   }
+
+  @media (max-width: 992px) {
+    .gallery {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .principal,
+    .grid {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .grid > div {
+      width: 100%;
+      padding: 0 0 10px !important;
+    }
+
+    .carouselContainer > div > div {
+      width: 100%;
+      height: calc(100% - 80px);
+    }
+
+    .carouselContainer .dots > li {
+      width: 78px;
+      margin: 0 3px;
+    }
+  }

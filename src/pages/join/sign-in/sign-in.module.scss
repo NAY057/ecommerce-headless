@@ -9,3 +9,10 @@
       margin-top: 10px;
     }
   }
+
+  @media (max-width: 992px) {
+    .signIn {
+      width: 100%;
+      max-width: 520px;
+    }
+  }

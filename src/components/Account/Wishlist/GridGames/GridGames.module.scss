@@ -41,10 +41,37 @@
     }
   }
   
-  .whislistIcon {
+.whislistIcon {
     position: absolute;
     top: 20px;
     right: 15px;
     font-size: 20px !important;
-    z-index: 1;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .game {
+    width: 50%;
   }
+}
+
+@media (max-width: 576px) {
+  .gridGames {
+    margin: -6px;
+    margin-top: 16px;
+  }
+
+  .game {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .game > a > div {
+    padding: 6px 6px 0 6px;
+  }
+
+  .whislistIcon {
+    top: 12px;
+    right: 10px;
+  }
+}

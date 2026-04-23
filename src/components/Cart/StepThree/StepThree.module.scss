@@ -18,3 +18,13 @@
     width: 300px;
   }
 }
+
+@media (max-width: 576px) {
+  .stepThree > h2 {
+    text-align: center;
+  }
+
+  .stepThree > a {
+    width: 100%;
+  }
+}
