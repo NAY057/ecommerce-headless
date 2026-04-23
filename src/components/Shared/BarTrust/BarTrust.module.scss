@@ -11,6 +11,7 @@
   justify-content: center;
   height: 100%;
   padding: 40px 0;
+  gap: 10px;
 }
 
 .block {
@@ -39,5 +40,25 @@
   span {
     font-size: 13px;
     color: $text-secondary;
+  }
+}
+
+@media (max-width: 992px) {
+  .content {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 24px 0;
+  }
+
+  .block {
+    width: calc(50% - 20px);
+    border-right: 0;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .block {
+    width: 100%;
   }
 }
