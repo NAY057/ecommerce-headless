@@ -8,6 +8,7 @@
 .columns {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 
   > div {
     width: 33.33%;
@@ -43,5 +44,24 @@
 
   > span {
     color: $text-secondary;
+  }
+}
+
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+  }
+
+  .columns > div {
+    width: 100%;
+  }
+
+  .columns > div.social {
+    justify-content: flex-start;
+  }
+
+  .columns > div.social > a {
+    margin-left: 0;
+    margin-right: 10px;
   }
 }

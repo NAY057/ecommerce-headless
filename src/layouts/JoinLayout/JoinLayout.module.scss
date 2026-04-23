@@ -44,3 +44,25 @@
   height: 100%;
   width: 50%;
 }
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    min-height: 100vh;
+    max-height: none;
+  }
+
+  .blockLeft,
+  .blockRight {
+    width: 100%;
+  }
+
+  .blockLeft {
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .blockRight {
+    min-height: 240px;
+  }
+}

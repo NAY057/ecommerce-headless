@@ -47,7 +47,6 @@ export function Resume(props) {
 				user.id,
 				addressSelected
 			);
-			debugger;
 			if (response.status === 200) {
 				deleteAllItems();
 				goToStepEnd();

@@ -49,3 +49,10 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .account button {
+    margin-left: 4px !important;
+    padding: 8px !important;
+  }
+}
